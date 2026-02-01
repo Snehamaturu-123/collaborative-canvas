@@ -1,10 +1,22 @@
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   background: #0f172a;
 }
 
-/* Toolbar MUST capture clicks */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  z-index: 1;
+}
+
 .toolbar {
   position: fixed;
   top: 12px;
@@ -16,23 +28,5 @@ body {
   background: #111827;
   border-radius: 12px;
   color: #e5e7eb;
-  z-index: 1000;
-}
-
-/* Buttons */
-button {
-  background: #020617;
-  color: #e5e7eb;
-  border: 1px solid #1f2933;
-  border-radius: 8px;
-  padding: 6px 12px;
-  cursor: pointer;
-}
-
-/* Canvas BELOW toolbar and NOT blocking clicks */
-canvas {
-  position: fixed;
-  inset: 0;
-  background: white;
-  z-index: 1;
+  z-index: 10;
 }
